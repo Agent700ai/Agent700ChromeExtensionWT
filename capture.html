@@ -1,0 +1,29 @@
+<!-- 
+  Agent700ChromeExtensionWT
+
+  This source code is licensed under the MIT License found in the
+  LICENSE file in the root directory of this source tree.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agent700 Web Capture</title>
+    <link rel="stylesheet" type="text/css" href="capture.css">
+</head>
+<body>
+    <div class="content"> 
+        <h1 id="message">Agent700 Web Capture</h1>
+        <div class="button-container">
+            <button class="capture-button" id="capture-button">Capture</button>
+            <button class="add-to-library-button" id="add-to-library-button" disabled>Add to Library</button> 
+        </div>
+        <textarea id="scraped-url" style="line-height: 1.8;" placeholder="Title of the scraped page"></textarea>
+        <textarea id="scraped-content" style="line-height: 1.8;"></textarea>
+        <div id="success-message" class="message success-message"></div>
+        <div id="error-message" class="message error-message"></div>
+    </div>
+    <script src="capture.js"></script> 
+</body>
+</html>
