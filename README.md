@@ -17,7 +17,7 @@ To install the Agent700ChromeExtensionWT, follow these steps:
 1. Clone or download this repository to your local machine.
 
    ```bash
-   git clone https://github.com/A007SS/Agent700ChromeExtensionWT.git
+   git clone https://github.com/Agent700ai/Agent700ChromeExtensionWT.git
    ```
 
 2. Open the Chrome browser and navigate to `chrome://extensions/`.
