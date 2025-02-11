@@ -44,6 +44,49 @@ To install the Agent700ChromeExtensionWT, follow these steps:
 
 We welcome contributions to the Agent700ChromeExtensionWT project! If you have suggestions for improvements or encounter any issues, feel free to create a pull request or open an issue in this repository.
 
+## Project Structure
+
+Here's a brief overview of the key files and directories in the project:
+
+- **background.js**: This file acts as the service worker for the Chrome extension, managing background tasks such as handling tab activations, window focus changes, and message passing. It also processes requests for scraping and managing active tabs.
+
+- **Capture.css**: Contains the styling for the capture interface of the extension, ensuring a consistent and user-friendly design for capturing and displaying scraped content.
+
+- **Capture.js**: Handles the logic for initializing the capture functionality, managing user interactions, executing content scripts on active tabs, and saving captured data to the Agent700 library.
+
+- **content-script.js**: Injected into web pages to scrape and clean the text content from the DOM, removing scripts and styles for a cleaner extraction.
+
+- **content.js**: Listens for messages to provide information like screen dimensions of the user's device.
+
+- **login.css**: Provides styles for the login interface, including layout, colors, and typography for a cohesive user experience.
+
+- **login.js**: Manages the login process, allowing users to authenticate with their Agent700 credentials and store the session token for future interactions.
+
+- **sidebar.css**: Defines the styles for the sidebar interface, including layout and visual design for navigation and content display within the extension.
+
+- **sidebar.js**: Handles the logic for dynamically loading different pages in the sidebar based on user interactions with the menu.
+
+- **TalkToPage.css**: Provides styling for the Talk to Page feature, ensuring a clean and responsive interface for interacting with agents on captured data.
+
+- **TalkToPage.js**: Initializes and manages the Talk to Page feature, enabling users to use their agents to engage with the captured data.
+
+- **manifest.json**: The configuration file that defines the extension's metadata, permissions, and resources, crucial for extension functionality in the Chrome browser.
+
+- **login.html**: The HTML markup for the login page, providing the structure for user authentication elements.
+
+- **capture.html**: The HTML markup for the capture page, providing the structure for the capturing and saving of we content.
+
+- **sidebar.html**: The HTML markup for the sidebar menu.
+
+- **TalkToPage.html**: The HTML markup for the agents page. Currently this page has an iFrame that referencse the agents library. The plan is to replace this with an agent selector and custom conversation canvas which will move us away from the iFrame. 
+
+- **LICENSE**: Contains the MIT License text, outlining the terms under which the project is distributed.
+
+- **README.md**: This file provides an overview of the project, including installation instructions, usage guidelines, and information about the project's structure and contributions.
+
+- **auth.js**: Contains utility functions for managing authentication states, including checking if a user is logged in by validating the session token against the Agent700 API.
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
