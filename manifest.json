@@ -1,38 +1,22 @@
 {
   "manifest_version": 3,
-  "name": "Agent700 Web Tools",
-  "version": "2.55",
-  "description": "Agent700 your web assistant.",
-  "minimum_chrome_version": "116",
+  "name": "Agent 700 Extension",
+  "version": "1.0",
+  "description": "A simple asidebar extension",
+  "permissions": ["sidePanel", "storage"],
+  "host_permissions": ["<all_urls>"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
   },
   "side_panel": {
-    "default_path": "login.html" 
-  },
-  "permissions": [
-    "activeTab",
-    "scripting",
-    "tabs",
-    "sidePanel",
-    "storage"
-  ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "default_path": "templates/asidebar.html"
   },
   "action": {
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
+    "default_title": "Open Agent 700 Asidebar"
   },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'; frame-src https://app.agent700.ai"
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
   }
 }

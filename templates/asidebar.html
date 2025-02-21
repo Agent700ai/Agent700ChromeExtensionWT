@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' https://cdnjs.cloudflare.com;"
+    />
+    <title>Agent700</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+  </head>
+  <body>
+    <!-- Welcome template -->
+    <div class="chat-config hide">
+      <div class="logo">
+        <img alt="Agent700 Logo" src="/assets/icon.png" />
+        <h1>Agent 700</h1>
+      </div>
+      <div class="welcome-message">
+        <p>Welcome to Agent 700!</p>
+        <p>For proper operation you must enter your Agent ID</p>
+      </div>
+      <input type="text" id="agentId" placeholder="Insert Agent ID" />
+      <span class="agentid-info"
+        >If you do not have the Agent ID, you can obtain it
+        <a href="https://agent700.ai" target="_blank">here</a></span>
+      <div class="buttons">
+        <button id="cancel" class="hide">CANCEL</button>
+        <button id="save">SAVE</button>
+      </div>
+      <p class="error hide">The Agent ID entered is not valid.</p>
+      <p class="initializing hide">Initializing chat...</p>
+    </div>
+
+    <!-- Chat template -->
+    <div class="agent700-chat aside hide">
+      <!-- <div class="agent700-overlay show"></div> -->
+      <div class="agent700-container">
+        <div id="agent-header">
+          <span class="config-agent" title="Agent700 Config"></span>
+          <span class="agent700-expand-contract"></span>
+          <span class="agent700-close"></span>
+          <span id="agent-header-avatar">
+            <img alt="Agent700 Avatar" src="../assets/header-avatar.png" />
+          </span>
+          <div id="agent-header-info">
+            <h3 id="agent-header-title">Agent 700</h3>
+            <p id="agent-header-status">
+              <span class="agent-header-status-indicator online"></span>
+              <span class="agent-header-status-text">Online</span>
+            </p>
+          </div>
+        </div>
+        <div class="agent-chat-content">
+          <!-- Chat dynamic content -->
+        </div>
+        <div id="agent-footer">
+          <div id="chatBox">
+            <div id="agentChatFields">
+              <textarea
+                id="chatInputMsg"
+                rows="1"
+                placeholder="Message"
+              ></textarea>
+              <button id="agentSendBtn"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script async src="../js/purify.min.js"></script>
+    <script async src="../js/marked.min.js"></script>
+    <script src="../js/agent700.js"></script>
+  </body>
+</html>
