@@ -14,7 +14,7 @@ class ChatBot {
     this.chatIcon = document.querySelector(".chat-agent-icon");
 
     //values
-    this.agentId = "d5cc29dc-c8fa-468b-aab2-cd2eb30f5af5";
+    this.agentId = "";
     this.apiUrl = "https://app.agent700.ai/api/chat";
     this.isVisible = true;
     this.overlayOption = "show";
